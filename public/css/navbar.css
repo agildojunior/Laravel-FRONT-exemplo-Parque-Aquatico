@@ -1,0 +1,48 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 103, 103);
+    padding: 20px 0px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+nav ul li a{
+    background-color: white;
+    text-decoration: none;
+    color: rgb(103, 159, 255);
+    padding: 10px 35px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    background-color: rgb(103, 159, 255);
+    color: white
+}
+.inicionav{
+    border-radius: 30px 0px 0px 30px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 10px;
+}
+.inicionav:hover{
+    background-color: white;
+}
+.fimnav{
+    border-radius: 0px 30px 30px 0px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 10px;
+}
+.fimnav:hover{
+    background-color: white;
+}
+.navDetalhe{
+    background-color: rgb(255, 151, 151);
+    padding: 5px 0px;
+}
