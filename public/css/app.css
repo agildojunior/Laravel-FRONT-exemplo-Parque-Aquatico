@@ -37,3 +37,71 @@
     text-align: center;
     color: rgb(103, 159, 255);;;
 }
+
+
+/* -------------------------- Formulario ----------------------------- */
+.divform{
+    font-size: 25px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(103, 159, 255);
+}
+
+.form-group input{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 1em;
+    font: 15px 'Montserrat' , sans-serif;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.form-group select{
+    margin-top: 10px;
+    width: 100%;
+    padding: 40px;
+    margin-bottom: 1em;
+    font: 1em 'Montserrat' , sans-serif;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.form-group label{
+    float: left;
+    font-size: 20px;
+}
+
+.form-group button{
+    background-color: rgb(103, 159, 255);
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    font-family: 'Montserrat' , sans-serif;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+.form-group button:hover{
+    cursor: pointer;
+    background-color: rgb(46, 123, 255);
+}
+
+.form-group-inv input{
+    width: 0px;
+    height: 0px;
+    color: #00000000;
+}
+.form-group-inv label{
+    width: 0px;
+    height: 0px;
+    color: #00000000;
+}
+.form-group-inv button{
+    width: 0px;
+    height: 0px;
+    color: #00000000;
+}
+

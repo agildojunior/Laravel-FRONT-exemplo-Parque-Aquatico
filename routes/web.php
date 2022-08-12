@@ -1,5 +1,7 @@
 <?php
-
+use App\Http\Controllers\consumirapiController;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 /*
@@ -45,4 +47,6 @@ Route::get('/auth/google/callback', function () {
     dd($user->getName(), $user->getEmail(), $user->getId());
     // $user->token
 });
+
+Route::get('/adicionarcorridas', [consumirapiController::class, 'adicionarcorridas']);
 

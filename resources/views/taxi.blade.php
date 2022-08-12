@@ -29,10 +29,30 @@
         <div class="bannerWP"></div>
 
         <div class="TituloContainer">
-        <h1>Chame um Taxi para o Water Park</h1>
+            <h1>Chame um Taxi</h1>
         </div>
-        
-        
+
+        <div class="divform">
+            <form class="formulario" action="/adicionarcorridas"  method="get"> 
+
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" placeholder="Digite seu nome." name="cliente" required>
+                </div>
+                <div class="form-group">
+                    <label>Origem</label>
+                    <input type="text" placeholder="Onde você está agora?" name="origem" required>
+                </div>
+                <div class="form-group">
+                    <label>Destino</label>
+                    <input type="text" placeholder="Qual seu destino?" name="destino" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="">Solicitar Corrida</button>
+                </div>
+
+            </form>
+        </div>
 
         <div class="footer-container">
             <footer>
