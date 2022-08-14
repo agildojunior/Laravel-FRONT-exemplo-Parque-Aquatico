@@ -14,6 +14,7 @@ class consumirapiController extends Controller
         'origem' => $request->input('origem'),
         'destino' => $request->input('destino'),
         'id_empresa' => 1,
+        'nome_usuario' => "user",
         ]);
         return redirect('/inicio');
     }
