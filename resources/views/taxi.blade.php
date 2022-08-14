@@ -33,6 +33,15 @@
         </div>
 
         <div class="divform">
+            
+                    <!-- <script>
+                        if (navigator.geolocation){
+                            navigator.geolocation.getCurrentPosition(function(position){
+                                document.querySelector('p').innerHTML = "latitude = " + position.coords.latitude + " longitude = " + position.coords.longitude;
+                            })
+                        }
+                    </script> -->
+
             <form class="formulario" action="/adicionarcorridas"  method="get"> 
 
                 <div class="form-group">
