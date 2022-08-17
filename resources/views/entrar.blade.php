@@ -6,10 +6,12 @@
 
         <title>Laravel</title>
 
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
         <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
         <link rel="stylesheet" href="{{ asset('css/galeria.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/buttonLoginGoogle.css') }}">
 
     </head>
     <body>
@@ -21,7 +23,7 @@
 		    	<li><a href="/waterpark">WaterPark</a></li>
 		    	<li><a href="/hospedagem">Hospedagem</a></li>
                 <li><a href="/taxi">Taxi</a></li> 
-                <li><a href="/auth/google/redirect">Entrar</a></li>
+                <li><a href="auth/google">Entrar</a></li>
                 <li><a class="fimnav" href="#"></a></li>
 		    </ul>
 	    </nav>
@@ -30,7 +32,20 @@
 
         <div class="TituloContainer">
         <h1>Entre agora ou Cadastre-se</h1>
+        <a href="{{ route('google-auth') }}">
+            <div class="google-btn">
+                <div class="google-icon-wrapper">
+                    <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                </div>
+                <p class="btn-text"><b>Sign in with google</b></p>
+            </div>
+        </a>
+            
         </div>
+
+        
+
+        
         
         
 

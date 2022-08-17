@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\GoogleAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,15 +39,18 @@ Route::get('/entrar', function () {
     return view('entrar');
 });
 
-Route::get('/auth/google/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
+// Route::get('/auth/google/redirect', function () {
+//     return Socialite::driver('google')->redirect();
+// });
 
-Route::get('/auth/google/callback', function () {
-    $user = Socialite::driver('google')->user();
-    dd($user->getName(), $user->getEmail(), $user->getId());
-    // $user->token
-});
+// Route::get('/auth/google/call-back', function () {
+//     $user = Socialite::driver('google')->user();
+//     dd($user->getName(), $user->getEmail(), $user->getId());
+//     // $user->token
+// });
+
+Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
+Route::get('auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
 Route::get('/adicionarcorridas', [consumirapiController::class, 'adicionarcorridas']);
 

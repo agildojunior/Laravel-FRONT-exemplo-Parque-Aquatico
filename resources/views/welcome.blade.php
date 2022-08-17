@@ -15,12 +15,12 @@
         <nav>
             <img src="{{ asset('img/waterPark.png') }}" height="140px"/>
 		    <ul>
-                <li><a class="inicionav" href="#"></a></li>
+            <li><a class="inicionav" href="#"></a></li>
 		    	<li><a href="/inicio">Inicio</a></li>
 		    	<li><a href="/waterpark">WaterPark</a></li>
 		    	<li><a href="/hospedagem">Hospedagem</a></li>
-                <li><a href="/taxi">Taxi</a></li>
-                <li><a href="/auth/google/redirect">Entrar</a></li>
+                <li><a href="/taxi">Taxi</a></li> 
+                <li><a href="auth/google">Entrar</a></li>
                 <li><a class="fimnav" href="#"></a></li>
 		    </ul>
 	    </nav>
