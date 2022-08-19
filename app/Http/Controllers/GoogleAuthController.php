@@ -22,7 +22,8 @@ class GoogleAuthController extends Controller
                 $new_user = User::create([
                     'name' => $google_user->getName(),
                     'email' => $google_user->getEmail(),
-                    'google_id' => $google_user->getId()
+                    'google_id' => $google_user->getId(),
+                    'avatar' => $google_user->getAvatar()
                 ]);
 
                 Auth::login($new_user);
@@ -47,6 +48,82 @@ class GoogleAuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+
+//-----------------------------------------------------------
+//      dados do usuario logado para todas as paginas
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+    //taxi
+    public function InfosUserLogadoTaxi(){
+        $teste = Auth::user();
+        if($teste != null){
+            $UserLogado = ([
+                'name' => Auth::user()->name,
+                'email' => Auth::user()->email
+            ]);
+        }else{
+            $UserLogado = ([
+                'name' => null,
+                'email' => null
+            ]);
+        }
+        return view('taxi', compact('UserLogado'));
+    }
+
+    //hospedagem
+    public function InfosUserLogadoHospedagem(){
+        $teste = Auth::user();
+        if($teste != null){
+            $UserLogado = ([
+                'name' => Auth::user()->name,
+                'email' => Auth::user()->email
+            ]);
+        }else{
+            $UserLogado = ([
+                'name' => null,
+                'email' => null
+            ]);
+        }
+
+        return view('hospedagem', compact('UserLogado'));
+    }
+    
+    //Waterpark
+    public function InfosUserLogadoWaterpark(){
+        $teste = Auth::user();
+        if($teste != null){
+            $UserLogado = ([
+                'name' => Auth::user()->name,
+                'email' => Auth::user()->email
+            ]);
+        }else{
+            $UserLogado = ([
+                'name' => null,
+                'email' => null
+            ]);
+        }
+
+        return view('waterpark', compact('UserLogado'));
+    }
+
+    //Welcome
+    public function InfosUserLogadoWelcome(){
+        $teste = Auth::user();
+        if($teste != null){
+            $UserLogado = ([
+                'name' => Auth::user()->name,
+                'email' => Auth::user()->email
+            ]);
+        }else{
+            $UserLogado = ([
+                'name' => null,
+                'email' => null
+            ]);
+        }
+
+        return view('welcome', compact('UserLogado'));
     }
 
 }

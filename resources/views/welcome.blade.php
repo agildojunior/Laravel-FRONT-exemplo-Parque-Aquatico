@@ -19,12 +19,18 @@
 		    	<li><a href="/inicio">Inicio</a></li>
 		    	<li><a href="/waterpark">WaterPark</a></li>
 		    	<li><a href="/hospedagem">Hospedagem</a></li>
+                @if($UserLogado['name'] != null) 
                 <li><a href="/taxi">Taxi</a></li> 
+                @endif
+                @if($UserLogado['name'] == null) 
                 <li><a href="auth/google">Entrar</a></li>
+                @endif
+                @if($UserLogado['name'] != null) 
                 <li><a href="logout">Sair</a></li>
-                <li>Nome: </li>
+                @endif
                 <li><a class="fimnav" href="#"></a></li>
 		    </ul>
+            <h1>{{ $UserLogado['name'] }}</h1>
 	    </nav>
         <div class="navDetalhe"></div>
         <div class="bannerWP"></div>

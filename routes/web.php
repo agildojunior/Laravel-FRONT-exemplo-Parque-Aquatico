@@ -35,9 +35,6 @@ Route::get('/taxi', function () {
     return view('taxi');
 });
 
-Route::get('/entrar', function () {
-    return view('entrar');
-});
 
 Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
 Route::get('auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
@@ -46,3 +43,13 @@ Route::get('logout', [GoogleAuthController::class, 'logout'])->name('logout');
 
 Route::get('/adicionarcorridas', [consumirapiController::class, 'adicionarcorridas']);
 
+//------------------------------------
+//rotas para dados de usuarios logados
+
+Route::get('taxi', [GoogleAuthController::class, 'InfosUserLogadoTaxi']);
+Route::get('hospedagem', [GoogleAuthController::class, 'InfosUserLogadoHospedagem']);
+Route::get('waterpark', [GoogleAuthController::class, 'InfosUserLogadoWaterpark']);
+Route::get('inicio', [GoogleAuthController::class, 'InfosUserLogadoWelcome']);
+Route::get('', [GoogleAuthController::class, 'InfosUserLogadoWelcome']);
+//------------------------------------
+//------------------------------------

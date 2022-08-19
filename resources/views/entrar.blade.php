@@ -27,6 +27,7 @@
                 <li><a href="/logout">Sair</a></li>
                 <li><a class="fimnav" href="#"></a></li>
 		    </ul>
+            
 	    </nav>
         <div class="navDetalhe"></div>
         <div class="bannerWP"></div>

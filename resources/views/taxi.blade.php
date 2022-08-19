@@ -20,11 +20,18 @@
 		    	<li><a href="/inicio">Inicio</a></li>
 		    	<li><a href="/waterpark">WaterPark</a></li>
 		    	<li><a href="/hospedagem">Hospedagem</a></li>
+                @if($UserLogado['name'] != null) 
                 <li><a href="/taxi">Taxi</a></li> 
+                @endif
+                @if($UserLogado['name'] == null) 
                 <li><a href="auth/google">Entrar</a></li>
-                <li><a href="/logout">Sair</a></li>
+                @endif
+                @if($UserLogado['name'] != null) 
+                <li><a href="logout">Sair</a></li>
+                @endif
                 <li><a class="fimnav" href="#"></a></li>
 		    </ul>
+            <h1>{{ $UserLogado['name'] }}</h1>
 	    </nav>
         <div class="navDetalhe"></div>
         <div class="bannerWP"></div>
@@ -35,13 +42,7 @@
 
         <div class="divform">
             
-                    <!-- <script>
-                        if (navigator.geolocation){
-                            navigator.geolocation.getCurrentPosition(function(position){
-                                document.querySelector('p').innerHTML = "latitude = " + position.coords.latitude + " longitude = " + position.coords.longitude;
-                            })
-                        }
-                    </script> -->
+                    
 
             <form class="formulario" action="/adicionarcorridas"  method="get"> 
 
