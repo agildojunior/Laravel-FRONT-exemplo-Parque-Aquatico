@@ -22,6 +22,7 @@
 		    	<li><a href="/hospedagem">Hospedagem</a></li>
                 <li><a href="/taxi">Taxi</a></li> 
                 <li><a href="auth/google">Entrar</a></li>
+                <li><a href="logout">Sair</a></li>
                 <li><a class="fimnav" href="#"></a></li>
 		    </ul>
 	    </nav>

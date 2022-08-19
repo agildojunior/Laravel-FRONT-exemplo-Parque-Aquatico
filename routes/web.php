@@ -39,18 +39,10 @@ Route::get('/entrar', function () {
     return view('entrar');
 });
 
-// Route::get('/auth/google/redirect', function () {
-//     return Socialite::driver('google')->redirect();
-// });
-
-// Route::get('/auth/google/call-back', function () {
-//     $user = Socialite::driver('google')->user();
-//     dd($user->getName(), $user->getEmail(), $user->getId());
-//     // $user->token
-// });
-
 Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
 Route::get('auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
+
+Route::get('logout', [GoogleAuthController::class, 'logout'])->name('logout');
 
 Route::get('/adicionarcorridas', [consumirapiController::class, 'adicionarcorridas']);
 

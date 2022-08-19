@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
+
 class consumirapiController extends Controller
 {
     //o ID dessa empresa cadastrada no banco da api é 1.
@@ -21,4 +22,5 @@ class consumirapiController extends Controller
         ]);
         return redirect('/inicio');
     }
+
 }
