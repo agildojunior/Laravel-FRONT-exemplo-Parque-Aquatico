@@ -19,6 +19,8 @@ class consumirapiController extends Controller
         $response = Http::withHeaders($header)->post('http://127.0.0.1:8090/corridas',[
         'origem' => $request->input('origem'),
         'destino' => $request->input('destino'),
+        'cep_origem' => $request->input('cep-origem'),
+        'cep_destino' => $request->input('cep-destino'),
         'id_empresa' => 1,
         'nome_usuario' => $nomeUserLogado,
         ]);

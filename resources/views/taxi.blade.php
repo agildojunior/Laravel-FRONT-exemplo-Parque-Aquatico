@@ -47,12 +47,20 @@
             <form class="formulario" action="/adicionarcorridas"  method="get"> 
 
                 <div class="form-group">
-                    <label>Origem</label>
+                    <label>Nome do local da origem</label>
                     <input type="text" placeholder="Onde você está agora?" name="origem" required>
                 </div>
                 <div class="form-group">
-                    <label>Destino</label>
+                    <label>CEP Origem</label>
+                    <input type="text" placeholder="Onde você está agora?" name="cep-origem" required>
+                </div>
+                <div class="form-group">
+                    <label>Nome do local do destino</label>
                     <input type="text" placeholder="Qual seu destino?" name="destino" required>
+                </div>
+                <div class="form-group">
+                    <label>CEP Destino</label>
+                    <input type="text" placeholder="Onde você está agora?" name="cep-destino" required>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="">Solicitar Corrida</button>
