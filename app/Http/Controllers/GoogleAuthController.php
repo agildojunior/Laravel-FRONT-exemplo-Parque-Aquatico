@@ -126,4 +126,21 @@ class GoogleAuthController extends Controller
         return view('welcome', compact('UserLogado'));
     }
 
+    //relatorios
+    public function InfosUserLogadoRelatorios(){
+        $teste = Auth::user();
+        if($teste != null){
+            $UserLogado = ([
+                'name' => Auth::user()->name,
+                'email' => Auth::user()->email
+            ]);
+        }else{
+            $UserLogado = ([
+                'name' => null,
+                'email' => null
+            ]);
+        }
+
+        return view('relatorios', compact('UserLogado'));
+    }
 }
