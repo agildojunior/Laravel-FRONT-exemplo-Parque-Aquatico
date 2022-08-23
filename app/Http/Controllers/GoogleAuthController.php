@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 use Laravel\Socialite\Facades\Socialite;
 
 class GoogleAuthController extends Controller
@@ -141,6 +142,16 @@ class GoogleAuthController extends Controller
             ]);
         }
 
-        return view('relatorios', compact('UserLogado'));
+        //funcao para informaçoes das corridas
+        $header = [
+            'x-access-token' => 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbnBqIjoiMTIzNCIsImV4cCI6MTY2MDYxMjE4N30.7I14fCQTLz_Fw4atNmuo2wfd6nYNT7yMxypX6Ofq4Ik'
+        ];
+        
+        $response = Http::withHeaders($header)->get('http://127.0.0.1:8090/relatorio/corridas/'. 1);
+        $responseArray = $response->json();
+
+        // dd($responseArray);
+
+        return view('relatorios', compact('UserLogado'), compact('responseArray'));
     }
 }

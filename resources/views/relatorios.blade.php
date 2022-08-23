@@ -52,7 +52,7 @@
                         <tr>
                             <th>Origem</th>
                             <th>Destino</th>
-                            <th>Taxista</th>
+                            <th>Cod.Taxista</th>
                             <th>Cliente</th>
                             <th>Preço</th>
                             <th>Empresa</th>
@@ -60,17 +60,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        @foreach($responseArray as $corridas)
                         <tr>
-                            <td>testetesteteste</td>
-                            <td>testetesteteste</td>
-                            <td>testetesteteste</td>
-                            <td>testetesteteste</td>
-                            <td>testetesteteste</td>
-                            <td>testetesteteste</td>
-                            <td>testetesteteste</td>
+                            <td>{{ $corridas['origem'] }}</td>
+                            <td>{{ $corridas['destino'] }}</td>
+                            <td>{{ $corridas['id_taxi'] }}</td>
+                            <td>{{ $corridas['nome_usuario'] }}</td>
+                            <td>{{ $corridas['preco'] }}</td>
+                            <td>{{ $corridas['id_empresa'] }}</td>
+                            <td>{{ $corridas['created_at'] }}</td>
                         </tr>
-                        
+                        @endforeach
                     </tbody>
                     
                     

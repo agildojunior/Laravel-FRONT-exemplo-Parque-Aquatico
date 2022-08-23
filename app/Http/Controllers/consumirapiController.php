@@ -27,4 +27,6 @@ class consumirapiController extends Controller
         return redirect('/inicio');
     }
 
+ 
+
 }
