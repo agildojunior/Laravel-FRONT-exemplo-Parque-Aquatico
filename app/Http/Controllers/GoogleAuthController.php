@@ -150,8 +150,11 @@ class GoogleAuthController extends Controller
         $response = Http::withHeaders($header)->get('http://127.0.0.1:8090/relatorio/corridas/'. 1);
         $responseArray = $response->json();
 
+        $response2 = Http::withHeaders($header)->get('http://127.0.0.1:8090/relatorio/corridas/');
+        $responseArray2 = $response2->json();
+        // dd($responseArray2);
         // dd($responseArray);
 
-        return view('relatorios', compact('UserLogado'), compact('responseArray'));
+        return view('relatorios', compact('UserLogado','responseArray', 'responseArray2'));
     }
 }

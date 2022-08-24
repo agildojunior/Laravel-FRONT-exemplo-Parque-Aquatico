@@ -39,24 +39,37 @@
         <div class="bannerWP"></div>
 
         <div class="TituloContainer">
-        <h1>Relatorios</h1>
+        <h1>Relatórios</h1>
         </div>
         
         <div class="divform">  
-
-        <div class="container2">
-                
+            <div class="container2">
+            <table class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Qtd. Corridas Agosto</th>
+                            <th>Qtd. Atendidas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ $responseArray2['CorridasFinalizadas'] }}</td>
+                            <td>{{ $responseArray2['CorridasMes'] }}</td>
+                        </tr>
+                    </tbody>  
+                </table>
+                <br>
+                <br>
                 <table class="tabela">
                     
                     <thead>
                         <tr>
                             <th>Origem</th>
                             <th>Destino</th>
-                            <th>Cod.Taxista</th>
+                            <th>Cod.Taxi</th>
                             <th>Cliente</th>
                             <th>Preço</th>
                             <th>Empresa</th>
-                            <th>Data</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -68,23 +81,11 @@
                             <td>{{ $corridas['nome_usuario'] }}</td>
                             <td>{{ $corridas['preco'] }}</td>
                             <td>{{ $corridas['id_empresa'] }}</td>
-                            <td>{{ $corridas['created_at'] }}</td>
                         </tr>
                         @endforeach
                     </tbody>
                     
-                    
                 </table>
-                <div class="paginacao">
-                        <div class="pagina"><</div>
-                        <div class="pagina">1</div>
-                        <div class="pagina">2</div>
-                        <div class="pagina active">3</div>
-                        <div class="pagina">4</div>
-                        <div class="pagina">5</div>
-                        <div class="pagina">></div>
-                </div>
-
             </div>
 
         </div>

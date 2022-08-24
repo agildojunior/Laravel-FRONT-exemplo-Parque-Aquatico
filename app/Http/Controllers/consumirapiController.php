@@ -25,8 +25,6 @@ class consumirapiController extends Controller
         'nome_usuario' => $nomeUserLogado,
         ]);
         return redirect('/inicio');
-    }
-
- 
+    }   
 
 }
